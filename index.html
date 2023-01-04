@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="style.css"/>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"/>
+  </head>
+
+  <body>
+
+    <header class="header">
+
+      <a class="logo" href="#">
+        <img src="images/logo.png" alt="Logo" />
+      </a>
+
+      <nav class="navbar">
+        <a href="#" class="active">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="product.html">Products</a>
+        <a href="about.html">About</a>
+        <a href="review.html">Review</a>
+        <a href="contact.html">Contact</a>
+        <a href="blog.html">Blog</a>
+      </nav>
+
+      <div class="buttons">
+
+        <button id="search-btn">
+          <i class="fas fa-search"></i>
+        </button>
+
+        <button id="cart-btn">
+          <i class="fas fa-shopping-cart"></i>
+        </button>
+
+        <button id="menu-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+
+      </div>
+
+      <div class="search-form">
+
+        <input 
+        type="text" 
+        class="search-input" 
+        id="search-box" 
+        placeholder="search here">
+        <i class="fas fa-search"></i>
+        
+      </div>
+
+      <div class="paybar">
+
+            <div class="num-input">
+                <span>CARD NUMBER</span>
+                <input type="text" 
+                placeholder="0000-0000-0000-0000"
+                maxlength="16">
+            </div>
+
+            <div class="num-input">
+                <span>CARD HOLDER</span>
+                <input type="text" 
+                placeholder="NAME LASTNAME">
+            </div>
+
+            <div class="section">
+                <div class="time">
+                    <div class="month">
+                        <span>EXPIRATION MM</span>
+                        <select class="month-sel">
+                            <option value="month" selected disabled>MONTH</option>
+                            <option value="01">01</option>
+                            <option value="02">02</option>
+                            <option value="03">03</option>
+                            <option value="04">04</option>
+                            <option value="05">05</option>
+                            <option value="06">06</option>
+                            <option value="07">07</option>
+                            <option value="08">08</option>
+                            <option value="09">09</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>
+                    </div>
+    
+                    <div class="year">
+                        <span>EXPIRATION YY</span>
+                        <select>
+                            <option value="year" selected disabled>YEAR</option>
+                            <option value="2023">2023</option>
+                            <option value="2024">2024</option>
+                            <option value="2025">2025</option>
+                            <option value="2026">2026</option>
+                            <option value="2027">2027</option>
+                        </select>
+                    </div>
+    
+                    <div class="cvv">
+                        <span>CVV</span>
+                        <input type="password" maxlength="4">
+                    </div>
+                </div>
+                
+                <div>
+                    <input value="Pay" type="submit" id="submit">
+                </div>
+
+            </div>
+
+      </div>
+
+      <div class="cart-items-container">
+
+        <span id="span">Basket  is  empty</span>
+
+        <a id="check" class="btn">Checkout Now</a>
+
+      </div>
+
+    </header>
+
+
+
+    <section class="home">
+
+        <div class="content">
+            <h3>EXPRESS HOME DELIVERY</h3>
+            <p>
+               Lorem Ipsum Dolor Sit Amet Consectetur
+               Adipisicing Elit. Laboriosam Quos
+               Repellendus Aliquam Quam Aperiam Quas?
+            </p>
+
+            <a href="#" class="btn">
+                Order Now
+            </a>
+        </div>
+
+    </section>
+
+
+
+    <section class="menu">
+
+        <h1 class="heading">our<span> menu</span></h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <div class="box-head">
+                    <img src="/images/menu-1.png" alt="Menu">
+                    <span class="menu-category">Pizza</span>
+                    <h3>6 Mini Pizza</h3>
+                    <div class="price">$104.99 <span>119.99</span></div>
+                </div>
+                <div class="box-bottom">
+                    <button id="btn1" class="btn">add to cart</button>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="box-head">
+                    <img src="/images/menu-2.png" alt="Menu">
+                    <span class="menu-category">Burger</span>
+                    <h3>5 Mini Burgers</h3>
+                    <div class="price">$99.99 <span>109.99</span></div>
+                </div>
+                <div class="box-bottom">
+                    <button id="btn2" class="btn">add to cart</button>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="box-head">
+                    <img src="/images/menu-3.png" alt="Menu">
+                    <span class="menu-category">Pizza</span>
+                    <h3>2 Mixed Pizzas</h3>
+                    <div class="price">$49.99 <span>59.99</span></div>
+                </div>
+                <div class="box-bottom">
+                    <button id="btn3" class="btn">add to cart</button>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="box-head">
+                    <img src="/images/menu-4.png" alt="Menu">
+                    <span class="menu-category">Burger</span>
+                    <h3>3 Meatball Burgers</h3>
+                    <div class="price">$79.99 <span>99.99</span></div>
+                </div>
+                <div class="box-bottom">
+                    <button id="btn4" class="btn">add to cart</button>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <section class="products">
+
+        <h1 class="heading">our<span> products</span></h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <div class="box-head">
+                    <span class="title">MINI BURGER</span>
+                    <a href="#" class="name">Bacon Burger</a>
+                </div>
+                <div class="image">
+                    <img src="images/product-1.png" alt="">
+                </div>
+                <div class="box-bottom">
+                    <div class="info">
+                        <b class="price">$6.00</b>
+                        <span class="amount">110gr  / 300 Cal</span>
+                    </div>
+                    <div class="product-btn">
+                        <button id="pbtn1">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="box-head">
+                    <span class="title">DARK BURGER</span>
+                    <a href="#" class="name">Dark+Cheese Burger</a>
+                </div>
+                <div class="image">
+                    <img src="images/product-2.png" alt="">
+                </div>
+                <div class="box-bottom">
+                    <div class="info">
+                        <b class="price">$12.00</b>
+                        <span class="amount">220gr  / 500 Cal</span>
+                    </div>
+                    <div class="product-btn">
+                        <button id="pbtn2">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box dark-bg">
+                <div class="box-head">
+                    <span class="title">DOUBLE DARK BURGER</span>
+                    <a href="#" class="name">Dark+Cheese+Double Burger</a>
+                </div>
+                <div class="image">
+                    <img src="images/dark-product.jpg" alt="">
+                </div>
+                <div class="box-bottom">
+                    <div class="info">
+                        <b class="price">$24.00</b>
+                        <span class="amount">400gr  / 1300 Cal</span>
+                    </div>
+                    <div class="product-btn">
+                        <button id="pbtn3">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+    </section>
+
+
+
+    <section class="about">
+
+        <h1 class="heading">about<span> us</span></h1>
+
+        <div class="row">
+
+            <div class="image">
+                <img src="images/about.jpg" alt="About">
+            </div>
+
+            <div class="content">
+                <h3>What Is The Secret Recipe Of Our Burgers?</h3>
+                <p>
+                    Lorem Ipsum, Dolor Sit Amet Consectetur Adipisicing Elit. 
+                    Quisquam Voluptatem Facere Amet Temporibus Culpa Sit Illo 
+                    Earum Cupiditate Soluta Perferendis!
+                </p>
+
+                <p>
+                    Lorem Ipsum, Dolor Sit Amet Consectetur Adipisicing Elit. 
+                    Quisquam Voluptatem Facere Amet Temporibus Culpa Sit Illo 
+                    Earum Cupiditate Soluta Perferendis!
+                </p>
+
+                <p>
+                    Lorem Ipsum, Dolor Sit Amet Consectetur Adipisicing Elit. 
+                    Quisquam Voluptatem Facere Amet Temporibus Culpa Sit Illo 
+                    Earum Cupiditate Soluta Perferendis!
+                </p>
+
+                <a href="#" class="btn">learn more</a>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <section class="review">
+
+        <h1 class="heading">customer's<span> review</span></h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <img src="images/quote.png" alt="Quote">
+                <p>
+                    Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Autem Nulla Repellendus Similique Porro Explicabo, Blanditiis Voluptatibus Obcaecati Harum Est, Eos Quo Modi Alias. Possimus Odio Quam Ex Earum Ducimus! Officia.
+                </p>
+
+                <img class="user" src="images/avatar-1.png" alt="Avatar">
+
+                <h3>Jennifer Becker</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="images/quote.png" alt="Quote">
+                <p>
+                    Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Autem Nulla Repellendus Similique Porro Explicabo, Blanditiis Voluptatibus Obcaecati Harum Est, Eos Quo Modi Alias. Possimus Odio Quam Ex Earum Ducimus! Officia.
+                </p>
+
+                <img class="user" src="images/avatar-2.png" alt="Avatar">
+
+                <h3>Jhon Doe</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="images/quote.png" alt="Quote">
+                <p>
+                    Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Autem Nulla Repellendus Similique Porro Explicabo, Blanditiis Voluptatibus Obcaecati Harum Est, Eos Quo Modi Alias. Possimus Odio Quam Ex Earum Ducimus! Officia.
+                </p>
+
+                <img class="user" src="images/avatar-3.png" alt="Avatar">
+
+                <h3>Lisa Arambula</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <section class="contact">
+
+        <h1 class="heading">contact<span> us</span></h1>
+
+        <div class="row">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12157.470495914025!2d49.8485665!3d40.3785442!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x53a5c1e7cc11c36f!2zQXrJmXJiYXljYW4gRMO2dmzJmXQgTmVmdCB2yZkgU8mZbmF5ZSBVbml2ZXJzaXRldGk!5e0!3m2!1str!2s!4v1672180356809!5m2!1str!2s"
+             class="map"
+             allowfullscreen="" 
+             loading="lazy" 
+             referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+
+            <form>
+
+                <h3>get in touch</h3>
+
+                <div class="inputBox">
+                    <i class="fas fa-user"></i>
+                    <input type="text" placeholder="Name">
+                </div>
+
+                <div class="inputBox">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" placeholder="E-mail adress">
+                </div>
+
+                <div class="inputBox">
+                    <i class="fas fa-phone"></i>
+                    <input type="text" placeholder="Phone number">
+                </div>
+
+                <input
+                id="contact" 
+                type="submit" 
+                class="btn" 
+                value="contact now">
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+
+    <section class="blog">
+
+        <h1 class="heading">our<span> blog</span></h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <div class="image">
+                    <img src="images/blog-1.jpg" alt="blog">
+                </div>
+
+                <div class="content">
+                    <a href="#" class="title">how to make burgers?</a>
+                    <span>by admin / 10st may, 2020</span>
+                    <p>
+                        Lorem Ipsum Dolor Sit Amet Consectetur, Adipisicing Elit. Temporibus, Laudantium!
+                    </p>
+                    <a href="#" class="btn">read more</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="images/blog-2.jpg" alt="blog">
+                </div>
+
+                <div class="content">
+                    <a href="#" class="title">how to make burgers?</a>
+                    <span>by admin / 10st may, 2020</span>
+                    <p>
+                        Lorem Ipsum Dolor Sit Amet Consectetur, Adipisicing Elit. Temporibus, Laudantium!
+                    </p>
+                    <a href="#" class="btn">read more</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="images/blog-3.jpg" alt="blog">
+                </div>
+
+                <div class="content">
+                    <a href="#" class="title">how to make burgers?</a>
+                    <span>by admin / 10st may, 2020</span>
+                    <p>
+                        Lorem Ipsum Dolor Sit Amet Consectetur, Adipisicing Elit. Temporibus, Laudantium!
+                    </p>
+                    <a href="#" class="btn">read more</a>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <section class="footer">
+
+        <div class="search">
+            <input 
+            class="search-input"
+            type="text"
+            placeholder="Search">
+            <button class="btn btn-primary">search</button>
+        </div>
+
+        <div class="share">
+            <a href="https://www.facebook.com/" class="fab fa-facebook"></a>
+            <a href="https://mobile.twitter.com/i/flow/login" class="fab fa-twitter"></a>
+            <a href="https://www.instagram.com/accounts/login/" class="fab fa-instagram"></a>
+            <a href="https://www.linkedin.com/login" class="fab fa-linkedin"></a>
+            <a href="https://www.pinterest.com/login/" class="fab fa-pinterest"></a>
+        </div>
+
+        <div class="links">
+            <a href="#" class="active">Home</a>
+            <a href="about.html">About</a>
+            <a href="menu.html">Menu</a>
+            <a href="product.html">Products</a>
+            <a href="review.html">Reviwe</a>
+            <a href="contact.html">Contact</a>
+            <a href="blog.html">Blog</a>
+        </div>
+
+        <div class="credit">
+            created by <span>Tapdig Shirinov</span>
+        </div>
+
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
